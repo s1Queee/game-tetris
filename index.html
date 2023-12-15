@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="tetris.ico">
+    <title>Tetris</title>
+</head>
+<body>
+    <div class="game board_wrap">
+        <img src="logo.png" alt="" class="logo" href="#" onclick="reload_confirm(); return false">
+        <div id="game_board"></div>
+    </div>
+
+    <script src="index.js"></script>
+     
+    <script>
+    function reload_confirm(){
+        if (confirm('Are you sure you want to restart the game?')) {
+            window.location.reload();
+        }
+    }
+    </script>
+
+    <script>
+        function Audio(audioName) {
+            let audio = new Audio(audioName);
+            audio.loop = true;
+            audio.play();
+        }
+        playSound("audio-one.mp3", "audio-two.mp3", "audio-three.mp3");
+    </script>
+    
+</body>
+</html>
